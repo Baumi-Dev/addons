@@ -31,7 +31,7 @@ class ServiceProvider extends AddonServiceProvider
                             if (isset($section['fields']) && is_array($section['fields'])) {
                                 foreach ($section['fields'] as &$existingField) {
                                     if (isset($existingField['field']['type'])
-                                        && $existingField['field']['type'] === 'select'
+                                        && $existingField['field']['type'] === 'select' || $existingField['field']['type'] === 'checkboxes'
                                     ) {
                                         if (isset($existingField['field']['options'])
                                             && is_array(

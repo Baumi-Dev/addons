@@ -21,7 +21,7 @@ class CustomDataReferenceUpdater extends DataReferenceUpdater
     {
         if ($fields && $fields->items()) {
             foreach ($fields->items() as $field) {
-                if ($field['field']['type'] === 'select') {
+                if ($field['field']['type'] === 'select' || $field['field']['type'] === 'checkboxes') {
                     $orderedOptions = $field['field']['options'];
                     $blueprint = DB::table('blueprints')
                         ->where('handle', $this->item->handle)
