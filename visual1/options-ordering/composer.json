@@ -1,0 +1,37 @@
+{
+    "name": "visual1/options-ordering",
+    "autoload": {
+        "psr-4": {
+            "Visual1\\OptionsOrdering\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Visual1\\OptionsOrdering\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "statamic/cms": "^5.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Options Ordering",
+            "description": "Options Ordering addon"
+        },
+        "laravel": {
+            "providers": [
+                "Visual1\\OptionsOrdering\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
